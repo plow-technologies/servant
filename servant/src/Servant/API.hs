@@ -8,6 +8,8 @@ module Servant.API (
   -- | Type-level combinator for expressing subrouting: @':>'@
   module Servant.API.Alternative,
   -- | Type-level combinator for alternative endpoints: @':<|>'@
+  module Servant.API.Disjoint,
+  -- | Type-level combinator for disjoint alternative endpoints: @':<!>'@
 
   -- * Accessing information from the request
   module Servant.API.Capture,
@@ -62,6 +64,7 @@ import           Servant.API.ContentTypes    (Accept (..), FormUrlEncoded,
                                               MimeUnrender (..), OctetStream,
                                               PlainText, ToFormUrlEncoded (..))
 import           Servant.API.Delete          (Delete)
+import           Servant.API.Disjoint        ((:<!>))
 import           Servant.API.Get             (Get)
 import           Servant.API.Header          (Header (..))
 import           Servant.API.MatrixParam     (MatrixFlag, MatrixParam,
